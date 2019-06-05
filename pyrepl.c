@@ -67,8 +67,9 @@ main(int argc, char *argv[])
 
             printf("=== %s ===\n", date_str);
 
-            FILE *file = _Py_fopen(watch_path, "r+");
+            FILE *file = _Py_fopen(watch_path, "r");
             PyRun_SimpleFile(file, watch_path);
+            fclose(file);
             printf("\n");
             p += sizeof(struct inotify_event) + event->len;
         }
