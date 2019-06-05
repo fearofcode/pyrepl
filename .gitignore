@@ -1,0 +1,6 @@
+*.swp
+*.tmp
+pyrepl
+*.bak
+a.out
+hello_world.py
