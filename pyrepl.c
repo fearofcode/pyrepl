@@ -38,7 +38,7 @@ main(int argc, char *argv[])
         exit(1);
     }
 
-    printf("Watching %s\n", watch_path);
+    printf("\nWatching %s\n", watch_path);
 
     wchar_t *program = Py_DecodeLocale(argv[0], NULL);
 
@@ -49,6 +49,10 @@ main(int argc, char *argv[])
 
     Py_SetProgramName(program);
     Py_Initialize();
+
+    FILE *file = _Py_fopen(watch_path, "r");
+    PyRun_SimpleFile(file, watch_path);
+    fclose(file);
 
     for (;;) {
         ssize_t num_read = read(inotify_fd, buf, BUF_LEN);
