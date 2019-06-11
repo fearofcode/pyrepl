@@ -1,6 +1,4 @@
 #! /bin/bash
 
-pushd build
-cmake ..
+cmake .
 make
-popd
