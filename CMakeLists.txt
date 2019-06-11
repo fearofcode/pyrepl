@@ -16,6 +16,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_compile_options(-m64 -std=c99 -flto -Wall -Wextra -Wpedantic -Xlinker -export-dynamic)
 
+# find_package(Python3 COMPONENTS Interpreter Development) results in Python.h not being
+# found so in the meantime I will use this janky bullshit that has the nice property of
+# working on my machine instead
+
 include_directories(/usr/include/python3.7m)
 link_directories(/usr/lib)
 link_libraries(python3.7m crypt pthread dl util m)
