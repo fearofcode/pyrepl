@@ -3,7 +3,7 @@ pyrepl
 
 Experimental low-latency hot-reloaded Python evaluator. Linux only at the moment.
 
-Build with `cmake . && make`. Requires a recent version of cmake, plus Python 3.7 + libraries installed (`apt install python3-dev` or something similar on Ubunt).
+Build with `./build.sh`. Requires a recent version of cmake, plus Python 3.7 + libraries installed (`apt install python3-dev` or something similar on Ubunt).
 
 In past versions, this was implemented in Go and ran on multiple platforms. I had trouble with duplicate events.
 

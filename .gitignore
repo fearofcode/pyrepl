@@ -5,9 +5,5 @@ pyrepl
 a.out
 hello_world.py
 
-CMakeCache.txt
-CMakeFiles/
-Makefile
-cmake_install.cmake
-compile_commands.json
+build/
 .clangd/
